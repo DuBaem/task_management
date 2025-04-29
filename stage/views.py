@@ -3,8 +3,12 @@ from django.http import HttpResponse
 
 
 # Create your views here.
+# def home(request):
+#     return render(request, 'stage/index.html')
+
 def home(request):
-    return(HttpResponse('<h1>Task Home</h1>'))
+     return(HttpResponse('<h1>Task hOme</h1>'))
 
 def about(request):
-    return(HttpResponse('<h1>Task About</h1>'))
+    return(HttpResponse('<h1>Task Sign</h1>'))
+
