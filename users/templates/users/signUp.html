@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="{% static 'stage\signUp.css' %}" rel="stylesheet" type="text/css" />
+    <link href="signUp.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body> 
+<body>
     <div class="container">
         <div class="form-container">
             <h1>Pioneering Task Management</h1>
             <h2>Sign Up</h2>
-            <form id="signup-form">
-                <label for="name">Name</label>
+            <!-- <form id="signup-form"> -->
+            <form method ="POST" action ="">
+                {{form}}
+                <!-- <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
                 <label for="email">Email Address</label>
@@ -31,18 +32,18 @@
                     <input type="checkbox" id="terms"> I agree to the terms & policy
                 </label>
 
-                <button type="submit" class="my-submit">Sign Up</button>
+                <button type="submit" class="my-submit">Sign Up</button> -->
             </form>
 
-            <div class="alternative-signup">
+            <!-- <div class="alternative-signup">
                 <div class="or-container">
                     <span>Or</span>
                 </div>
 
                 <button class="google-signin">Sign in with Google</button>
                 <button class="apple-signin">Sign in with Apple</button>
-                <p>Have an account? <a href="{% url 'task-login' %}">Sign In</a></p>
-            </div>
+                <p>Have an account? <a href="index.html">Sign In</a></p>
+            </div> -->
         </div>
 
         <div class="quote-container">
@@ -73,7 +74,7 @@
             }
 
             alert("Thank you for signing up, " + name + "! You have successfully registered.");
-            window.location.href = "{% url 'task-login' %}";
+            window.location.href = "index.html";
         });
     </script>
 

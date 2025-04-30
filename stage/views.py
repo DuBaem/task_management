@@ -8,5 +8,5 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'stage/index.html')
 
-def signup(request):
-    return render(request, 'stage/signUp.html')
+# def signup(request):
+#     return render(request, 'stage/signUp.html')
