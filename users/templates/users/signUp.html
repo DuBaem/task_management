@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="signUp.css" rel="stylesheet" type="text/css" />
+    <link href="{% static 'users\signup.css' %}" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -18,7 +20,32 @@
             <h2>Sign Up</h2>
             <!-- <form id="signup-form"> -->
             <form method ="POST" action ="">
-                {{form}}
+                {% csrf_token %}
+                {{form.username.label}}
+                {{form.username}}
+                <br>
+                {{form.email.label}}
+                {{form.email}}
+                <br>
+
+                <!-- {{form.password.label}}
+                {{form.password}}
+                <br>
+
+                {{form.password2.label}}
+                {{form.password2}} -->
+
+                <label for="password1">Password</label>
+                {{ form.password1 }}
+                <br>
+
+                <label for="password2">Confirm Password</label>
+                {{ form.password2 }}
+
+                {{ form.password1.errors }}
+                {{ form.password2.errors }}
+
+
                 <!-- <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
@@ -33,6 +60,7 @@
                 </label>
 
                 <button type="submit" class="my-submit">Sign Up</button> -->
+                <button type="submit" class="my-submit">Sign Up</button> 
             </form>
 
             <!-- <div class="alternative-signup">
