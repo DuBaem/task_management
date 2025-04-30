@@ -41,7 +41,7 @@
 
                 <button class="google-signin">Sign in with Google</button>
                 <button class="apple-signin">Sign in with Apple</button>
-                <p>Have an account? <a href="index.html">Sign In</a></p>
+                <p>Have an account? <a href="{% url 'task-login' %}">Sign In</a></p>
             </div>
         </div>
 
@@ -73,7 +73,7 @@
             }
 
             alert("Thank you for signing up, " + name + "! You have successfully registered.");
-            window.location.href = "index.html";
+            window.location.href = "{% url 'task-login' %}";
         });
     </script>
 

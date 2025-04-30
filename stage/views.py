@@ -9,5 +9,4 @@ def home(request):
     return render(request, 'stage/index.html')
 
 def signup(request):
-    return render(request, 'stage/signup.html')
-
+    return render(request, 'stage/signUp.html')
