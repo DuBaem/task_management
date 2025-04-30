@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+<<<<<<< HEAD
+=======
+import os
+>>>>>>> f456028 (actually pushed this time to the correct branch, created superuser and fixed my index file)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,7 +38,10 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'stage.apps.StageConfig',
     'crispy_forms',
+<<<<<<< HEAD
     'crispy_bootstrap4',
+=======
+>>>>>>> f456028 (actually pushed this time to the correct branch, created superuser and fixed my index file)
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +50,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+<<<<<<< HEAD
+=======
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'stage/static'),
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+>>>>>>> f456028 (actually pushed this time to the correct branch, created superuser and fixed my index file)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
